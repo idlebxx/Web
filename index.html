@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ريد لاين — حلول رقمية متكاملة، تطوير مواقع، تسويق رقمي، وتصميم احترافي." />
+  <meta name="keywords" content="شركة برمجة, تصميم مواقع, تسويق رقمي, تطوير ويب" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="REDLINE — حلول رقمية متكاملة" />
+  <meta property="og:description" content="نصنع لك تجربة رقمية لا تُنسى." />
+  <meta property="og:type" content="website" />
+
+  <title>REDLINE | حلول رقمية متكاملة</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- AOS Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Favicon (نقطة حمراء بسيطة) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23cc0000'/%3E%3C/svg%3E" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== شاشة التحميل ========== -->
+  <div id="loader" class="loader">
+    <div class="loader-spinner">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+    </div>
+    <p class="loader-text">جاري التحميل...</p>
+  </div>
+
+  <!-- ========== خلفية الجسيمات ثلاثية الأبعاد ========== -->
+  <canvas id="bg-particles"></canvas>
+  <div class="bg-gradient"></div>
+
+  <!-- ========== شريط التنقل العلوي ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-icon">●</span>
+        <span class="logo-text" data-ar="ريد لاين" data-en="REDLINE">REDLINE</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#services">خدماتنا</a></li>
+        <li><a href="#stats">إنجازاتنا</a></li>
+        <li><a href="#social">التواصل</a></li>
+        <li><a href="#testimonials">آراء العملاء</a></li>
+        <li><a href="#join" class="nav-cta">انضم لنا</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="langToggle" class="icon-btn" title="تبديل اللغة">
+          <i class="fas fa-language"></i>
+        </button>
+        <button id="themeToggle" class="icon-btn" title="تبديل الوضع">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="menuToggle" class="icon-btn menu-btn" title="القائمة">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== 1️⃣ القسم الرئيسي (Hero) ========== -->
+  <section id="home" class="hero">
+    <div class="container hero-container">
+      <div class="hero-content" data-aos="fade-up">
+        <span class="hero-badge">مرحباً بك في <span id="heroCompanyName">REDLINE</span></span>
+        <h1 class="hero-title">
+          <span class="hero-3d-text" id="logo3d">R</span>
+          نصنع لك
+          <span class="typed-text" id="typed"></span>
+        </h1>
+        <p class="hero-desc" id="heroDesc">
+          شركة رائدة في تطوير الحلول الرقمية والتسويق الإلكتروني، نصنع لك تجربة رقمية لا تُنسى.
+        </p>
+        <div class="hero-buttons">
+          <a href="#services" class="btn btn-primary">
+            <span>استكشف خدماتنا</span>
+            <i class="fas fa-arrow-left"></i>
+          </a>
+          <a href="#join" class="btn btn-ghost">
+            <span>انضم لفريقنا</span>
+            <i class="fas fa-users"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-aos="fade-left">
+        <div class="hero-3d-shape">
+          <div class="cube">
+            <div class="face front">REDLINE</div>
+            <div class="face back">DIGITAL</div>
+            <div class="face right">SOLUTIONS</div>
+            <div class="face left">CREATIVE</div>
+            <div class="face top">2026</div>
+            <div class="face bottom">PRO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ========== 2️⃣ من نحن ========== -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">تعرف علينا</span>
+        <h2 class="section-title">من نحن</h2>
+        <p class="section-subtitle">قصة نجاح بدأت بشغف وتواصلت باحتراف</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text" data-aos="fade-right">
+          <h3>رؤيتنا</h3>
+          <p>أن نكون الشريك الرقمي الأول في المنطقة العربية، نقدم حلولاً مبتكرة تليق بطموحات عملائنا.</p>
+
+          <h3>رسالتنا</h3>
+          <p>تمكين الشركات والأفراد من تحقيق أهدافهم الرقمية عبر تقنيات حصرية، فريق محترف، وتجربة عميل استثنائية.</p>
+
+          <h3>قيمنا</h3>
+          <ul class="values-list">
+            <li><i class="fas fa-check-circle"></i> الإبداع في كل مشروع</li>
+            <li><i class="fas fa-check-circle"></i> الشفافية والمصداقية</li>
+            <li><i class="fas fa-check-circle"></i> الجودة فوق كل شيء</li>
+            <li><i class="fas fa-check-circle"></i> الالتزام بالمواعيد</li>
+          </ul>
+        </div>
+
+        <div class="about-visual" data-aos="fade-left">
+          <div class="about-card glass">
+            <i class="fas fa-bullseye"></i>
+            <h4>رؤية</h4>
+            <p>الريادة الرقمية عربياً</p>
+          </div>
+          <div class="about-card glass">
+            <i class="fas fa-rocket"></i>
+            <h4>رسالة</h4>
+            <p>حلول تقنية تليق بطموحك</p>
+          </div>
+          <div class="about-card glass">
+            <i class="fas fa-heart"></i>
+            <h4>قيم</h4>
+            <p>إبداع • جودة • التزام</p>
+          </div>
+          <div class="about-card glass">
+            <i class="fas fa-trophy"></i>
+            <h4>تميز</h4>
+            <p>جوائز وشهادات تقدير</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- فريق العمل -->
+      <div class="team-section" data-aos="fade-up">
+        <h3 class="team-title">فريقنا</h3>
+        <div class="team-grid">
+          <div class="team-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="team-photo">
+              <div class="team-avatar"><i class="fas fa-user-tie"></i></div>
+              <div class="team-glow"></div>
+            </div>
+            <h4>أحمد العلي</h4>
+            <span>الرئيس التنفيذي</span>
+          </div>
+          <div class="team-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="team-photo">
+              <div class="team-avatar"><i class="fas fa-code"></i></div>
+              <div class="team-glow"></div>
+            </div>
+            <h4>سارة الحربي</h4>
+            <span>مديرة التقنية</span>
+          </div>
+          <div class="team-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="team-photo">
+              <div class="team-avatar"><i class="fas fa-palette"></i></div>
+              <div class="team-glow"></div>
+            </div>
+            <h4>خالد الزهراني</h4>
+            <span>مدير التصميم</span>
+          </div>
+          <div class="team-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="team-photo">
+              <div class="team-avatar"><i class="fas fa-bullhorn"></i></div>
+              <div class="team-glow"></div>
+            </div>
+            <h4>نورة السديري</h4>
+            <span>مديرة التسويق</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 3️⃣ خدماتنا ========== -->
+  <section id="services" class="section services">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">ماذا نقدم</span>
+        <h2 class="section-title">خدماتنا</h2>
+        <p class="section-subtitle">حلول رقمية متكاملة لنجاح أعمالك</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-aos="flip-left" data-aos-delay="100">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>تطوير المواقع</h3>
+          <p>مواقع احترافية متجاوبة وسريعة باستخدام أحدث التقنيات.</p>
+          <a href="#service-request" class="service-link">طلب خدمة <i class="fas fa-arrow-left"></i></a>
+        </div>
+
+        <div class="service-card" data-aos="flip-left" data-aos-delay="200">
+          <div class="service-icon"><i class="fas fa-mobile-screen"></i></div>
+          <h3>تطبيقات الجوال</h3>
+          <p>تطبيقات iOS و Android بأداء عالٍ وتجربة استخدام متميزة.</p>
+          <a href="#service-request" class="service-link">طلب خدمة <i class="fas fa-arrow-left"></i></a>
+        </div>
+
+        <div class="service-card" data-aos="flip-left" data-aos-delay="300">
+          <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+          <h3>التسويق الرقمي</h3>
+          <p>حملات إعلانية مدفوعة وإدارة حسابات التواصل الاجتماعي.</p>
+          <a href="#service-request" class="service-link">طلب خدمة <i class="fas fa-arrow-left"></i></a>
+        </div>
+
+        <div class="service-card" data-aos="flip-left" data-aos-delay="400">
+          <div class="service-icon"><i class="fas fa-palette"></i></div>
+          <h3>التصميم الجرافيكي</h3>
+          <p>هويات بصرية، شعارات، وموشن جرافيكس بأسلوب إبداعي.</p>
+          <a href="#service-request" class="service-link">طلب خدمة <i class="fas fa-arrow-left"></i></a>
+        </div>
+
+        <div class="service-card" data-aos="flip-left" data-aos-delay="500">
+          <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+          <h3>المتاجر الإلكترونية</h3>
+          <p>متاجر إلكترونية متكاملة مع بوابات الدفع وإدارة المخزون.</p>
+          <a href="#service-request" class="service-link">طلب خدمة <i class="fas fa-arrow-left"></i></a>
+        </div>
+
+        <div class="service-card" data-aos="flip-left" data-aos-delay="600">
+          <div class="service-icon"><i class="fas fa-search"></i></div>
+          <h3>تحسين محركات البحث</h3>
+          <p>تحسين ظهور موقعك في نتائج البحث الأولى وزيادة الزيارات.</p>
+          <a href="#service-request" class="service-link">طلب خدمة <i class="fas fa-arrow-left"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 8️⃣ الإحصائيات (نحطه هنا عشان يظهر قبل التواصل) ========== -->
+  <section id="stats" class="section stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-number" data-target="250">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">عميل سعيد</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="stat-number" data-target="480">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">مشروع منجز</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+          <div class="stat-number" data-target="35">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">جائزة وتقدير</div>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+          <div class="stat-number" data-target="7">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">سنوات خبرة</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4️⃣ التواصل الاجتماعي ========== -->
+  <section id="social" class="section social">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">ابقَ على تواصل</span>
+        <h2 class="section-title">حساباتنا على التواصل الاجتماعي</h2>
+        <p class="section-subtitle">تابعنا على كل المنصات وكن جزءاً من رحلتنا</p>
+      </div>
+
+      <div class="social-grid">
+        <a href="#" data-social="whatsapp"  class="social-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fab fa-whatsapp"></i>
+          <h4>واتساب</h4>
+          <span class="social-handle">تواصل مباشر</span>
+          <span class="social-followers">محادثة فورية</span>
+          <button class="copy-btn" data-link="whatsapp"><i class="fas fa-copy"></i> نسخ الرابط</button>
+        </a>
+        <a href="#" data-social="telegram"  class="social-card" data-aos="fade-up" data-aos-delay="150">
+          <i class="fab fa-telegram"></i>
+          <h4>تيليجرام</h4>
+          <span class="social-handle">@redline</span>
+          <span class="social-followers" data-follow="telegram">0</span>
+          <button class="copy-btn" data-link="telegram"><i class="fas fa-copy"></i> نسخ الرابط</button>
+        </a>
+        <a href="#" data-social="instagram" class="social-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fab fa-instagram"></i>
+          <h4>انستقرام</h4>
+          <span class="social-handle">@redline</span>
+          <span class="social-followers" data-follow="instagram">0</span>
+          <button class="copy-btn" data-link="instagram"><i class="fas fa-copy"></i> نسخ الرابط</button>
+        </a>
+        <a href="#" data-social="facebook"  class="social-card" data-aos="fade-up" data-aos-delay="250">
+          <i class="fab fa-facebook"></i>
+          <h4>فيسبوك</h4>
+          <span class="social-handle">/redline</span>
+          <span class="social-followers" data-follow="facebook">0</span>
+          <button class="copy-btn" data-link="facebook"><i class="fas fa-copy"></i> نسخ الرابط</button>
+        </a>
+        <a href="#" data-social="twitter"   class="social-card" data-aos="fade-up" data-aos-delay="300">
+          <i class="fab fa-x-twitter"></i>
+          <h4>تويتر / X</h4>
+          <span class="social-handle">@redline</span>
+          <span class="social-followers" data-follow="twitter">0</span>
+          <button class="copy-btn" data-link="twitter"><i class="fas fa-copy"></i> نسخ الرابط</button>
+        </a>
+        <a href="#" data-social="youtube"   class="social-card" data-aos="fade-up" data-aos-delay="350">
+          <i class="fab fa-youtube"></i>
+          <h4>يوتيوب</h4>
+          <span class="social-handle">@redline</span>
+          <span class="social-followers" data-follow="youtube">0</span>
+          <button class="copy-btn" data-link="youtube"><i class="fas fa-copy"></i> نسخ الرابط</button>
+        </a>
+        <a href="#" data-social="linkedin"  class="social-card" data-aos="fade-up" data-aos-delay="400">
+          <i class="fab fa-linkedin"></i>
+          <h4>لينكدإن</h4>
+          <span class="social-handle">/redline</span>
+          <span class="social-followers" data-follow="linkedin">0</span>
+          <button class="copy-btn" data-link="linkedin"><i class="fas fa-copy"></i> نسخ الرابط</button>
+        </a>
+        <a href="#" data-social="tiktok"    class="social-card" data-aos="fade-up" data-aos-delay="450">
+          <i class="fab fa-tiktok"></i>
+          <h4>تيك توك</h4>
+          <span class="social-handle">@redline</span>
+          <span class="social-followers" data-follow="tiktok">0</span>
+          <button class="copy-btn" data-link="tiktok"><i class="fas fa-copy"></i> نسخ الرابط</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 6️⃣ طلب الخدمة ========== -->
+  <section id="service-request" class="section service-request">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">ابدأ الآن</span>
+        <h2 class="section-title">طلب خدمة</h2>
+        <p class="section-subtitle">املأ النموذج وسيتواصل معك فريقنا خلال 24 ساعة</p>
+      </div>
+
+      <form id="serviceForm" class="form glass" data-aos="fade-up">
+        <input type="hidden" name="form_type" value="service_request" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label><i class="fas fa-user"></i> الاسم الكامل *</label>
+            <input type="text" name="name" required minlength="3" />
+          </div>
+          <div class="form-group">
+            <label><i class="fab fa-whatsapp"></i> رقم الواتساب *</label>
+            <input type="tel" name="whatsapp" required placeholder="+9665xxxxxxxx" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+            <input type="email" name="email" />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-briefcase"></i> نوع الخدمة *</label>
+            <select name="service_type" required>
+              <option value="">-- اختر الخدمة --</option>
+              <option>تطوير موقع</option>
+              <option>تطوير تطبيق</option>
+              <option>متجر إلكتروني</option>
+              <option>تسويق رقمي</option>
+              <option>تصميم جرافيك</option>
+              <option>تحسين SEO</option>
+              <option>استشارة</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label><i class="fas fa-comment-dots"></i> تفاصيل الطلب *</label>
+          <textarea name="message" rows="4" required minlength="10" placeholder="اشرح لنا فكرتك ومتطلباتك..."></textarea>
+        </div>
+
+        <!-- Honeypot anti-spam (مخفي) -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" />
+
+        <button type="submit" class="btn btn-submit">
+          <span class="btn-text">إرسال الطلب</span>
+          <span class="btn-loader"></span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== 5️⃣ الانضمام للفريق ========== -->
+  <section id="join" class="section join">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">فرصتك المهنية</span>
+        <h2 class="section-title">انضم إلى عائلة شركتنا</h2>
+        <p class="section-subtitle">ابحث عن فرصة، نحن نبحث عن مواهب</p>
+      </div>
+
+      <form id="joinForm" class="form glass form-large" data-aos="fade-up">
+        <input type="hidden" name="form_type" value="join_team" />
+
+        <h3 class="form-section-title"><i class="fas fa-user"></i> المعلومات الشخصية</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>الاسم الكامل *</label>
+            <input type="text" name="full_name" required minlength="3" />
+          </div>
+          <div class="form-group">
+            <label>البريد الإلكتروني *</label>
+            <input type="email" name="email" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>رقم الواتساب *</label>
+            <input type="tel" name="whatsapp" required placeholder="+9665xxxxxxxx" />
+          </div>
+          <div class="form-group">
+            <label>تاريخ الميلاد</label>
+            <input type="date" name="birth_date" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>المدينة / المنطقة</label>
+            <input type="text" name="city" placeholder="مثال: الرياض" />
+          </div>
+          <div class="form-group">
+            <label>الجنس</label>
+            <select name="gender">
+              <option value="">-- اختر --</option>
+              <option>ذكر</option>
+              <option>أنثى</option>
+            </select>
+          </div>
+        </div>
+
+        <h3 class="form-section-title"><i class="fas fa-briefcase"></i> معلومات التقديم</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>الوظيفة المتقدم لها *</label>
+            <select name="position" required>
+              <option value="">-- اختر الوظيفة --</option>
+              <option>مدير مبيعات</option>
+              <option>مدير تسويق</option>
+              <option>مطور ويب (Frontend)</option>
+              <option>مطور ويب (Backend)</option>
+              <option>مطور تطبيقات</option>
+              <option>مصمم جرافيك</option>
+              <option>مصمم UI/UX</option>
+              <option>موشن جرافيك</option>
+              <option>خدمة عملاء</option>
+              <option>كاتب محتوى</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>سنوات الخبرة</label>
+            <select name="experience">
+              <option value="">-- اختر --</option>
+              <option>بدون خبرة</option>
+              <option>أقل من سنة</option>
+              <option>1-3 سنوات</option>
+              <option>3-5 سنوات</option>
+              <option>5-10 سنوات</option>
+              <option>أكثر من 10 سنوات</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>المهارات (افصل بفاصلة)</label>
+          <input type="text" name="skills" placeholder="مثال: HTML, CSS, JavaScript, Photoshop" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>السيرة الذاتية (PDF) *</label>
+            <input type="file" name="cv" accept=".pdf,.doc,.docx" required />
+            <small>الحد الأقصى: 5 ميجابايت</small>
+          </div>
+          <div class="form-group">
+            <label>صورة شخصية (اختياري)</label>
+            <input type="file" name="photo" accept="image/*" />
+            <small>JPG, PNG — حد أقصى 2 ميجابايت</small>
+          </div>
+        </div>
+
+        <h3 class="form-section-title"><i class="fas fa-info-circle"></i> معلومات إضافية</h3>
+        <div class="form-group">
+          <label>لماذا تريد الانضمام إلينا؟ *</label>
+          <textarea name="why_join" rows="4" required minlength="20" placeholder="حدثنا عن دوافعك وما يمكنك تقديمه..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>كيف عرفت عنا؟</label>
+            <select name="source">
+              <option value="">-- اختر --</option>
+              <option>تويتر / X</option>
+              <option>انستقرام</option>
+              <option>فيسبوك</option>
+              <option>تيليجرام</option>
+              <option>يوتيوب</option>
+              <option>لينكدإن</option>
+              <option>تيك توك</option>
+              <option>صديق / زميل</option>
+              <option>بحث Google</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>هل لديك خبرة سابقة في نفس المجال؟</label>
+            <select name="has_experience" id="hasExperience">
+              <option value="">-- اختر --</option>
+              <option value="yes">نعم</option>
+              <option value="no">لا</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group" id="experienceDetailsWrap" style="display:none">
+          <label>تفاصيل الخبرة السابقة</label>
+          <textarea name="experience_details" rows="3" placeholder="أين عملت؟ ما المنصب؟ ما المدة؟"></textarea>
+        </div>
+
+        <h3 class="form-section-title"><i class="fas fa-shield-halved"></i> الموافقات</h3>
+        <div class="checkbox-group">
+          <label class="checkbox">
+            <input type="checkbox" name="agree_data" required />
+            <span>أوافق على مشاركة بياناتي مع فريق التوظيف</span>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="agree_privacy" required />
+            <span>قرأتُ وأوافق على <a href="#" target="_blank">سياسة الخصوصية</a></span>
+          </label>
+        </div>
+
+        <!-- Honeypot -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" />
+
+        <button type="submit" class="btn btn-submit btn-success">
+          <span class="btn-text">إرسال الطلب</span>
+          <span class="btn-loader"></span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== 7️⃣ آراء العملاء ========== -->
+  <section id="testimonials" class="section testimonials">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">ماذا قالوا عنا</span>
+        <h2 class="section-title">آراء عملائنا</h2>
+        <p class="section-subtitle">ثقة العملاء أعظم إنجازاتنا</p>
+      </div>
+
+      <div class="testimonial-slider" data-aos="fade-up">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial-card glass">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <p>"تعاملت مع REDLINE في تطوير متجري الإلكتروني، والنتائج فاقت توقعاتي. فريق محترف وأسعار منافسة."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
+              <div>
+                <strong>محمد الشمري</strong>
+                <span>صاحب متجر إلكتروني</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card glass">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <p>"حملة تسويقية احترافية رفعت مبيعاتي 300% خلال 3 أشهر فقط. شكراً لفريق التسويق الإبداعي."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
+              <div>
+                <strong>فاطمة العمري</strong>
+                <span>مالكة براند أزياء</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card glass">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <p>"موقع الشركة الجديد صُمّم بشكل مذهل وساعدنا على الوصول لأسواق جديدة. التزام بالمواعيد وجودة عالية."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
+              <div>
+                <strong>عبدالله القحطاني</strong>
+                <span>مدير شركة عقارية</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card glass">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <p>"أفضل تعامل مهني شهدته. من الاستشارة الأولى حتى التسليم، كان كل شيء على أعلى مستوى."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
+              <div>
+                <strong>نوال الحربي</strong>
+                <span>صاحبة مشروع تقني</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button id="prevTestimonial" class="slider-btn"><i class="fas fa-chevron-right"></i></button>
+          <button id="nextTestimonial" class="slider-btn"><i class="fas fa-chevron-left"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 9️⃣ الفوتر ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#home" class="logo footer-logo">
+            <span class="logo-icon">●</span>
+            <span class="logo-text">REDLINE</span>
+          </a>
+          <p>حلول رقمية متكاملة لنجاح أعمالك. نصنع لك تجربة رقمية لا تُنسى.</p>
+          <div class="footer-social">
+            <a href="#" data-social="whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" data-social="telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" data-social="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" data-social="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" data-social="twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" data-social="youtube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#stats">إنجازاتنا</a></li>
+            <li><a href="#join">انضم لنا</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>خدماتنا</h4>
+          <ul>
+            <li><a href="#services">تطوير المواقع</a></li>
+            <li><a href="#services">تطبيقات الجوال</a></li>
+            <li><a href="#services">التسويق الرقمي</a></li>
+            <li><a href="#services">التصميم الجرافيك</a></li>
+            <li><a href="#services">تحسين SEO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>تواصل معنا</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> <span id="footerEmail">info@redline.com</span></li>
+            <li><i class="fas fa-phone"></i> <span id="footerPhone">+966500000000</span></li>
+            <li><i class="fas fa-map-marker-alt"></i> <span id="footerAddress">الرياض، السعودية</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> <span id="footerCompany">REDLINE</span>. جميع الحقوق محفوظة.</p>
+        <div class="footer-legal">
+          <a href="#">سياسة الخصوصية</a>
+          <a href="#">شروط الاستخدام</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- زر العودة للأعلى -->
+  <button id="scrollTop" class="scroll-top" title="العودة للأعلى">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- رسائل Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- AOS + Three.js (اختياري) -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Site scripts -->
+  <script src="config.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
